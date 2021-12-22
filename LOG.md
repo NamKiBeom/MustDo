@@ -16,3 +16,5 @@
         - SwiftUI의 View를 주입해서 UIViewController로 생성해주는 역할.
         - UIViewController를 subClass했다고 함.
         - 공식문서 학습이 필요함. 대충 봤을 땐 WrappedVC 느낌이긴한데, 아직 잘 모르겠음.
+- 2021.12.22
+    - 이사 업무 처리로 인한 휴무
