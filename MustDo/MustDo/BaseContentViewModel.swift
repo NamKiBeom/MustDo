@@ -22,11 +22,18 @@ class BaseContentViewModel: ObservableObject {
     @Published var listDataSource: [MustDoList] = []
     
     init() {
+        bind()
+        configureListDataSource()
+    }
+    
+    func bind() {
         listDataSourceSubject
             .replaceError(with: [])
             .assign(to: \.listDataSource, on: self)
             .store(in: &cancellableSet)
-            
+    }
+    
+    func configureListDataSource() {
         let listData = [0, 1, 2, 3, 4, 5].map { MustDoList(description: "할일 목록: \($0)") }
         listDataSourceSubject.send(listData)
     }
