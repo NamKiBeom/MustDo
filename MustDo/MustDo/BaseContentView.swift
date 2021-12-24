@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct BaseContentView: View {
+    @ObservedObject var viewModel: BaseContentViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(viewModel.listDataSource) { dataSource in
+            Text("\(dataSource.description)")
+        }
     }
 }
 
 struct BaseContentView_Previews: PreviewProvider {
     static var previews: some View {
-        BaseContentView()
+        let viewModel = BaseContentViewModel()
+        BaseContentView(viewModel: viewModel)
     }
 }
