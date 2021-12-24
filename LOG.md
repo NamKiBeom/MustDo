@@ -18,3 +18,8 @@
         - 공식문서 학습이 필요함. 대충 봤을 땐 WrappedVC 느낌이긴한데, 아직 잘 모르겠음.
 - 2021.12.22
     - 이사 업무 처리로 인한 휴무
+- 2021.12.23
+    - 개인 업무 처리 이슈 및 Data Flow Through SwiftUI 절반 학습
+- 2021.12.24
+    - Data Flow Through SwiftUI 학습 및 정리 완료 [notion 정리 링크](https://lucky-sleet-a6d.notion.site/Data-Flow-Through-SwiftUI-e28b59d731c84df59c696ac81dc92ec3)
+    - 학습한 걸 바탕으로 List 생성 및 data 관리를 ViewModel에서 해주도록 구현
