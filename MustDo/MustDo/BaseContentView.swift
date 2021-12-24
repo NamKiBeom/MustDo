@@ -18,7 +18,7 @@ struct BaseContentView: View {
 }
 
 struct MustDoCell: View {
-    let dataSource: MustDoList
+    let dataSource: MustDo
     
     var body: some View {
         VStack(alignment: .leading) {
