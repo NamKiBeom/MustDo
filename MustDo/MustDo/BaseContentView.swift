@@ -12,7 +12,23 @@ struct BaseContentView: View {
     
     var body: some View {
         List(viewModel.listDataSource) { dataSource in
+            MustDoCell(dataSource: dataSource)
+        }
+    }
+}
+
+struct MustDoCell: View {
+    let dataSource: MustDoList
+    
+    var body: some View {
+        VStack(alignment: .leading) {
             Text("\(dataSource.description)")
+                .font(.headline)
+            HStack {
+                Text("소요시간: ")
+                Text("\(dataSource.hour) hours")
+            }
+            .font(.subheadline)
         }
     }
 }

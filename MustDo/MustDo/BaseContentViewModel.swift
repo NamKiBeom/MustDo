@@ -12,6 +12,7 @@ import SwiftUI
 struct MustDoList: Identifiable {
     var id: UUID = UUID()
     let description: String
+    let hour: Int
 }
 
 class BaseContentViewModel: ObservableObject {
@@ -34,7 +35,7 @@ class BaseContentViewModel: ObservableObject {
     }
     
     func configureListDataSource() {
-        let listData = [0, 1, 2, 3, 4, 5].map { MustDoList(description: "할일 목록: \($0)") }
+        let listData = [1, 2, 3, 4, 5].map { MustDoList(description: "할일 목록: \($0)", hour: $0) }
         listDataSourceSubject.send(listData)
     }
 }
