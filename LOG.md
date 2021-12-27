@@ -23,3 +23,7 @@
 - 2021.12.24
     - Data Flow Through SwiftUI 학습 및 정리 완료 [notion 정리 링크](https://lucky-sleet-a6d.notion.site/Data-Flow-Through-SwiftUI-e28b59d731c84df59c696ac81dc92ec3)
     - 학습한 걸 바탕으로 List 생성 및 data 관리를 ViewModel에서 해주도록 구현
+- 2021.12.25, 26
+    - 주말
+- 2021.12.27
+    - WWDC : Building Custom Views with SwiftUI 학습 [notion 정리 링크](https://lucky-sleet-a6d.notion.site/Building-Custom-Views-with-SwiftUI-0478937383f24d72b9edf579a70a6fb6)
