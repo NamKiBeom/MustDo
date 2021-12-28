@@ -27,3 +27,6 @@
     - 주말
 - 2021.12.27
     - WWDC : Building Custom Views with SwiftUI 학습 [notion 정리 링크](https://lucky-sleet-a6d.notion.site/Building-Custom-Views-with-SwiftUI-0478937383f24d72b9edf579a70a6fb6)
+- 2021.12.28
+    - NavigationView 적용
+    - 파마 이슈
