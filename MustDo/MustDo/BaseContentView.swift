@@ -18,6 +18,7 @@ struct BaseContentView: View {
                 }
             }
             .navigationBarTitle("MustDo")
+            .listStyle(.plain)
         }
     }
 }
