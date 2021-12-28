@@ -11,8 +11,13 @@ struct BaseContentView: View {
     @ObservedObject var viewModel: BaseContentViewModel
     
     var body: some View {
-        List(viewModel.listDataSource) { dataSource in
-            MustDoCell(dataSource: dataSource)
+        NavigationView {
+            List(viewModel.listDataSource) { dataSource in
+                NavigationLink(destination: MustDoDetailView()) {
+                    MustDoCell(dataSource: dataSource)
+                }
+            }
+            .navigationBarTitle("MustDo")
         }
     }
 }
