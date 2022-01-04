@@ -8,13 +8,40 @@
 import SwiftUI
 
 struct BaseContentView: View {
+    @ObservedObject var viewModel: BaseContentViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(viewModel.listDataSource) { dataSource in
+                NavigationLink(destination: MustDoDetailView()) {
+                    MustDoCell(dataSource: dataSource)
+                }
+            }
+            .navigationBarTitle("MustDo")
+            .listStyle(.plain)
+        }
+    }
+}
+
+struct MustDoCell: View {
+    let dataSource: MustDo
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("\(dataSource.description)")
+                .font(.headline)
+            HStack {
+                Text("소요시간: ")
+                Text("\(dataSource.hour) hours")
+            }
+            .font(.subheadline)
+        }
     }
 }
 
 struct BaseContentView_Previews: PreviewProvider {
     static var previews: some View {
-        BaseContentView()
+        let viewModel = BaseContentViewModel()
+        BaseContentView(viewModel: viewModel)
     }
 }
