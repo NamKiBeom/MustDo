@@ -7,18 +7,35 @@
 
 import SwiftUI
 
+private struct InteractorKey: EnvironmentKey {
+    typealias Value = BaseInteractor
+    
+    static let defaultValue: Value = BaseInteractor(repository: BaseRepository(), state: AppState())
+}
+
+extension EnvironmentValues {
+    var interactors: BaseInteractor {
+        get { self[InteractorKey.self] }
+        set { self[InteractorKey.self] = newValue }
+    }
+}
+
 struct BaseContentView: View {
-    @ObservedObject var viewModel: BaseContentViewModel
+    @EnvironmentObject var appState: AppState
+    @Environment(\.interactors) var interactors: BaseInteractor
     
     var body: some View {
         NavigationView {
-            List(viewModel.listDataSource) { dataSource in
+            List(appState.listDataSource) { dataSource in
                 NavigationLink(destination: MustDoDetailView()) {
                     MustDoCell(dataSource: dataSource)
                 }
             }
             .navigationBarTitle("MustDo")
             .listStyle(.plain)
+            .onAppear {
+                interactors.loadMustDo()
+            }
         }
     }
 }
