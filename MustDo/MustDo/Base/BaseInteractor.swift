@@ -6,14 +6,22 @@
 //
 
 import Foundation
+import Combine
 
 struct BaseInteractor {
-    let repository: BaseRepository
-    let state: AppState
+    private let repository: BaseRepository
+    private let state: AppState
+    private var store: Set<AnyCancellable> = Set()
     
     init(repository: BaseRepository, state: AppState) {
         self.repository = repository
         self.state = state
     }
 
+    mutating func loadMustDo() {
+        repository
+            .loadMustDo()
+            .assign(to: \.listDataSource, on: self.state)
+            .store(in: &store)
+    }
 }
