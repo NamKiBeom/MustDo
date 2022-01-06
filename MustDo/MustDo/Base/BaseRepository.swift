@@ -8,6 +8,12 @@
 import Foundation
 import Combine
 
+struct MustDo: Identifiable {
+    var id: UUID = UUID()
+    let description: String
+    let hour: Int
+}
+
 struct BaseRepository {
     func loadMustDo() -> AnyPublisher<[MustDo], Never> {
         let mustDoList = [1, 2, 3, 4, 5]
