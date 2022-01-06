@@ -10,13 +10,18 @@ import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
+    @ObservedObject var appState = AppState()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             
-            let viewModel = BaseContentViewModel()
-            let baseView = BaseContentView(viewModel: viewModel)
+            let interactor = BaseInteractor(repository: BaseRepository(),
+                                            state: appState)
+            
+            let baseView = BaseContentView()
+                .environmentObject(appState)
+                .environment(\.interactors, interactor)
             window.rootViewController = UIHostingController(rootView: baseView)
             self.window = window
             window.makeKeyAndVisible()

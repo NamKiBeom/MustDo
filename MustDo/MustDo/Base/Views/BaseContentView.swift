@@ -58,7 +58,12 @@ struct MustDoCell: View {
 
 struct BaseContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = BaseContentViewModel()
-        BaseContentView(viewModel: viewModel)
+        let appState = AppState()
+        let interactor = BaseInteractor(repository: BaseRepository(),
+                                        state: appState)
+        
+        BaseContentView()
+            .environmentObject(appState)
+            .environment(\.interactors, interactor)
     }
 }
