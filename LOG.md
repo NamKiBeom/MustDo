@@ -39,3 +39,6 @@
 - 2022.01.05
     - Clean SwiftUI 적용 연습
         - EnvironmentKey에 대한 학습이 필요함
+- 2022.01.06
+    - 약속 이슈
+    - EnvironmentKey 학습
