@@ -32,6 +32,7 @@ struct BaseContentView: View {
                 }
             }
             .navigationBarTitle("MustDo")
+            .navigationBarHidden(true)
             .onAppear {
                 interactors.loadMustDo()
             }
