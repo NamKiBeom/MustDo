@@ -32,7 +32,6 @@ struct BaseContentView: View {
                 }
             }
             .navigationBarTitle("MustDo")
-            .listStyle(.plain)
             .onAppear {
                 interactors.loadMustDo()
             }
