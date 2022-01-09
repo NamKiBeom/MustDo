@@ -42,3 +42,8 @@
 - 2022.01.06
     - 약속 이슈
     - EnvironmentKey 학습
+- 2022.01.09
+    - navigationView에 button을 추가할까 생각하다가 그냥 custom View로 하나 만들어서 navigation 역할을 대신하는게 좋겠다라는 생각이 들었음.
+    - 할일 목록 추가는 modal로 띄워진 View에서 처리할 예정
+        - 참고 사이트: https://www.hackingwithswift.com/quick-start/swiftui/how-to-present-a-new-view-using-sheets
+        - 푸시랑 모달이랑 차이는 있을거라고 예상했지만, 이렇게까지나 처리방식이 다를 줄은 몰랐음.
