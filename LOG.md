@@ -47,3 +47,8 @@
     - 할일 목록 추가는 modal로 띄워진 View에서 처리할 예정
         - 참고 사이트: https://www.hackingwithswift.com/quick-start/swiftui/how-to-present-a-new-view-using-sheets
         - 푸시랑 모달이랑 차이는 있을거라고 예상했지만, 이렇게까지나 처리방식이 다를 줄은 몰랐음.
+- 2022.01.10
+    - Clean SwiftUI 샘플 프로젝트를 살펴봄.
+        - 기존에 AppState를 class로 만들고 이걸 ObservableObject로 설정하라는 문서 내용과 다르게 프로젝트 내부에선 struct로 선언되어 있었음.
+        - 프로젝트를 살펴본 이유는 AppState는 앱 전체를 관리하는 것인가 아니면 뷰마다 하나씩 존재하여 data를 제어하는 것인가 아직 확실하지 않음.
+        - 만약에 AppState를 기준으로 하나씩 주입하는 것이라면 주입하는 방식도 학습할 필요가 있다.
