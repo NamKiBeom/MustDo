@@ -60,3 +60,9 @@
         - Combine이나 SwiftUI에 정의된 struct or class 구현 방식에 대해 좀 더 깊게 학습할 필요가 있음.
             - 정의된 struct나 class를 커스텀해서 필요로하는 operator를 만들거나 원하는 특정 function을 만들려고 할 때 유용할 듯 하다.
             - 공식문서를 학습하는 방식으로 진행 예정
+- 2022.01.14
+    - 휴식~
+- 2022.01.15, 2022.01.16
+    - 슈퍼 앱 아키택처 구축 수강
+    - Clean SwiftUI 샘플 프로젝트 학습
+        - AppEnvironment, Store 정리 
