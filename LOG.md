@@ -66,3 +66,8 @@
     - 슈퍼 앱 아키택처 구축 수강
     - Clean SwiftUI 샘플 프로젝트 학습
         - AppEnvironment, Store 정리 
+- 2022.01.17
+    - DIContainer 분석
+    - Interactor 분석
+    - Lodable 분석 필요
+    - ViewModifier 분석 필요
